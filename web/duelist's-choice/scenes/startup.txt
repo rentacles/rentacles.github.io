@@ -1,5 +1,5 @@
 *title Duelist's Choice
-*author Anonymous
+*author Ren
 *scene_list
   startup
   pub
@@ -67,13 +67,14 @@ What would you like to do now?
     *page_break Go back
     *goto choiceschoiceschoices
   #Leave a comment on the fic
-    Thank you! Unfortunately ChoiceScript doesn't allow hyperlinks, so please copy those URLs into your address bar to leave a comment on the site you prefer. All comments and feedback are very much appreciated!
+    Thank you! Unfortunately ChoiceScript doesn't allow hyperlinks, so please copy these URL into your address bar to leave a comment on the site you prefer. All comments and feedback are very much appreciated!
 
     On AO3:
     http://archiveofourown.org/works/2461829
 
     On LJ:
     http://hd-fan-fair.livejournal.com/92159.html
+    (Please note, as of 2018 I am no longer active on LJ.)
     *page_break Go back
     *goto choiceschoiceschoices
 
