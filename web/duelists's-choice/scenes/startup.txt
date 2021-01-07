@@ -1,5 +1,5 @@
 *title Duelist's Choice
-*author Anonymous
+*author Ren
 *scene_list
   startup
   pub
