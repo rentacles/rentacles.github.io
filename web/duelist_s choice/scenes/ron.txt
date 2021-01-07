@@ -1,0 +1,458 @@
+Word about the duel against Parkinson and Zabini gets out, and some noblemen start saying that you're a dangerous madman who could attack them in the street for no reason. But they're in the minority, and overall you're as popular as ever in ${town}.
+
+With the social season about to start, you get several requests for your services, and you accept a few. That keeps you busy, and you don't have time to run errands for Hermione any more.
+
+*if (Friendship > 50)
+  You see Draco Malfoy from time to time, though, when he shows up at the ${pub}. He's there almost every week, to ask you to fight a duel for him. The fact that your answer is always negative doesn't seem to deter him. After a while he stops asking about the duel, and instead you spend the nights talking about various subjects.
+
+*if not(Friendship > 50)
+  You see Draco Malfoy from time to time, though, when he shows up at the ${pub}. He's there almost every week, to ask you to fight a duel for him. The fact that your answer is always negative can't seem to deter him. After a while he stops asking about the duel, and instead you spend the nights arguing about various subjects.
+
+One night, though, he makes you an entirely different proposal.
+
+*page_break
+
+You're sitting at your usual table in the corner with your usual glasses of ${butterbeer}.
+*if (Friendship > 50)
+  Recently you've persuaded Malfoy to try what he calls "commoners' swill" and he's decreed it passable, so there are a few empty glasses on the table already.
+*if not(Friendship > 50)
+  Malfoy's drink is, as usual, untouched. He still refuses to touch what he calls "commoners' swill", and you've given up trying to change his mind.
+
+Malfoy leans back in his chair and fixes his icy grey eyes on you. "Teach me how to duel," he says, out of the blue. You stare at him, thinking you've misheard, so he continues. "I'm serious. It's the least you can do, since you won't fight for me."
+
+"I've fought for you plenty of times," you point out. Malfoy is extremely touchy and he likes to provoke people. You've lost count of how many times he's picked a quarrel in the past few months and you've had to claim the duel to avoid him being killed.
+
+Malfoy smirks. "All the more reason. Teach me, and you won't have to fight duels in my place any more."
+
+*label indecentproposal
+*choice
+  #Accept
+    "All right," you say.
+    *set Friendship %+10
+    *goto gym
+  #Refuse
+    *set Friendship %-20
+    "I'm not a teacher," you say. "If you want to learn how to fight, go to one of the many dueling schools in ${mainstreet}."
+
+    Malfoy glares at you. "Do you think you're too good for me, Potter?" he spits out. He leans forward on the table. "You won't fight for me, you won't even teach me... I don't know why I bother with you. You're not the only duelist in ${town}, you know!"
+
+    "Why do you bother with me, then?" you reply, staring back.
+
+    He looks away abruptly.
+
+    *page_break
+
+    "I'll pay you," he says. "Name your price. Whatever you want, I'll pay you."
+
+    You want to throw the offer back in his face, but you pause. Little Hugo has caught a fever a few nights back and, between paying for a ${healer} and for medicines, Ron and Hermione's few savings have nearly run out. You don't feel like you can refuse Malfoy's offer lightly.
+
+    Still, if you're going to do this, you might as well make it worth your while. You name a price so high that you're sure Malfoy will refuse and say that you've gone too far.
+
+    Malfoy doesn't even flinch. "It's a deal," he says with a nasty grin. "I knew you'd come around. Every man has his price, after all."
+
+    You seethe, but you console yourself with the thought that your friends' money troubles are over.
+
+    *page_break
+    *goto gym
+  *hide_reuse #Ask him why
+    *if (Friendship > 50)
+      "Why?" you ask. "I thought you didn't mind me fighting in your place."
+
+      He smirks. "I don't. But you're not always around and we live in a dangerous city. Knowing how to fight with a ${weapon} might prove useful one day."
+    *if not(Friendship > 50)
+      "Why?" you ask. "I thought you liked making me to clean up your messes."
+
+      He smirks. "I do. But I'm bored and I've got nothing to do all day since quitting University. Learning ${weapon}smanship will pass the time."
+
+    You think he might not be entirely truthful. You consider his proposal. Will you teach him?
+    *goto indecentproposal
+
+*label gym
+
+Malfoy rents the use of a couple of rooms near the river. The building used to be a dueling school, but it went out of business years ago so you have the place all to yourselves. You meet there a couple of afternoons every week to duel.
+
+In the past, friends have often come to you for practice matches, so you've got some experience in coaching people. Malfoy seems eager to learn, but he's hindered by everything he's been taught in the past, about how form and elegance are more important than actually dispatching your opponent. You set to work to change that.
+
+*if (Friendship > 50)
+  Under your tutelage Malfoy quickly shows signs of improvement. You knock him on his back more often than not and you spare him no criticism, but that only makes him try harder.
+
+  You're secretly proud of his successes. If he was ten years younger, you could have made an excellent duelist out of him.
+*if not(Friendship > 50)
+  You're a stern taskmaster and you go hard on Malfoy, pointing out every single mistake that he makes. You miss no chance to knock him on his back, and you secretly relish defeating him time and again.
+
+  If he was ten years younger, you could have made a decent duelist out of him, but he's too old to learn now. Still, Malfoy doesn't give up, and each loss makes him try harder.
+
+*page_break
+
+One evening, you finish your customary training session and you leave on your own. Malfoy remains in the gym to rehearse a move that you taught him today. Lately he's taken to staying behind more often than not. You wouldn't have expected this level of dedication from someone who quit University and is essentially a layabout, and you don't know what to make of it.
+
+The lesson has run late and it's already sunset. You walk quickly down the street, thinking about dinner, when a carriage catches your eye. There aren't many noblemen who venture so near ${home}, for fear of their carriage being held up and robbed. Besides, this equipage is striking: it's a sleek landau pulled by four black horses, with a family crest on the doors.
+
+The carriage is parked at the end of the street, as if waiting for something.
+
+*if malfoy_saw
+  The crest looks familiar to you for some reason. Struck by sudden remembrance, you search your pockets and find the letter than a mysterious noblewoman sent you so many months ago. It's covered with stains and scribbles, since you've been using it to take notes, but the stamped crest is still visible on the sigil: it matches the crest on the carriage.
+
+  You remember Malfoy's strange reaction when he saw the letter in your hands, and his insistence that you teach him dueling. Struck by sudden disquiet, you turn around and walk back into the building.
+  *set UST +10
+  *page_break
+  *goto gym_inside_early
+*if bellatrix_letter
+  The crest looks familiar to you for some reason, but you can't place it. But you remember Malfoy's insistence that you teach him dueling, and you're struck by sudden disquiet.
+  *choice
+    #Turn back and ask Malfoy about the mysterious crest
+      *set UST +10
+      *goto gym_inside_early
+    #It's probably nothing, go home
+      You decide it's none of your business. There are dozens of noblemen in ${town}, you might have seen that crest in the streets or at someone's party.
+      *goto see_ron
+
+*label see_ron
+
+As you walk down the street you keep turning your head towards the mysterious carriage. You've almost reached the end of the street when the door opens and someone alights from the carriage.
+
+You can't see very well from this distance, but the figure is tall and has flaming red hair. If you didn't know better, you'd say that was Ron. But what would Ron be doing in a nobleman's carriage?
+
+While you ponder this, the redhead walks into the building where Malfoy is still training.
+
+*choice
+  #He might be Ron, follow him inside
+    You shake your head at your own fanciful ideas. It's ridiculous to think that Ron would step out of a posh carriage and have a secret assignment with Malfoy. But the thought keeps nagging at you, so you turn around and follow the redhead back into the building.
+
+    As you walk up the stairs you hear raised voices, and your heart plummets. It is Ron, after all. You take the stairs two at a time and you enter the room just in time to see Ron draw his ${weapon}.
+
+    Opposite him, Malfoy is still in his shirtsleeves and holding his ${weapon}. Both he and Ron turn around as you enter.
+
+    "Harry!" Ron says, and his face falls. "You weren't supposed to be here."
+
+    "What's going on?" you ask, looking from him to Malfoy, even though the answer is obvious.
+
+    "He's challenged me," Malfoy says, sounding stunned. "He's challenged me [i]to the death[/i]."
+
+    *goto gym_inside
+  #He can't be Ron, go home
+    You shake your head at your own fanciful ideas. It's ridiculous to think that Ron would step out of a posh carriage and have a secret assignment with Malfoy. You don't know if that was Ron, and come to think of it you're not even sure he walked in the house where Malfoy was. He might have been any other nobleman with red hair, and he might have walked into the neighbouring building for all you know. You were, after all, quite far from the carriage to see very well.
+
+    By the time you reach the ${pub}, you're quite sure that you dreamed up the whole thing and you're smiling at the thought of what Ron will say when you tell him the story. However, Ron is not at his usual place behind the counter.
+
+    Hermione informs you that Ron stepped out a while back, claiming he had an errand to run, and he hasn't returned yet.
+
+    *page_break
+
+    The next day, ${town} is in an uproar over the news that Draco Malfoy has been killed in a duel. Nobody knows what happened exactly, or who his opponent was, but speculation abounds. Some gossips say it was an enemy of his family, others say a jilted lover.
+
+    Ron avoids your eyes whenever the conversation turns to Malfoy, and you feel a sense of growing disquiet. Eventually you confront Ron about seeing him on the night Malfoy dies, but Ron denies everything. You pretend to believe him and try to go back to the way things were.
+
+    You, Harry Potter, will never be able to shake the feeling that your best friend killed Malfoy for some unknown reason, and that he's now lying to you about it. You and Ron will eventually fall out, and you will leave ${town} forever. You will end your days fighting duels in a foreign country where nobody knows your name.
+
+    [b]GAME OVER[/b]
+    *ending
+
+*label gym_inside_early
+
+Malfoy is still inside, practicing his moves against a wooden dummy. He's rolled up his shirtsleeves and when he hears you come in he steps back and wipes some sweat from his forehead. Sometimes, you forget just how handsome Malfoy is. It's because whenever you're admiring his good looks he always spoils the effect by opening his mouth.
+
+He throws you a questioning look. "Back so soon, Potter?" he asks. "Did you miss me?"
+
+You're in no mood for banter right now.
+
+"There's a strange carriage parked outside," you say. "It's all black, with a crest with three birds and a skull on top. I've seen that crest somewhere before..."
+
+All colour drains from Malfoy's already pale face. "She's here?" he asks.
+
+"Who's 'she'?" you ask, but before he can answer the door slams open.
+
+*page_break
+
+You look at the newcomer with disbelief. "Ron?" you ask.
+
+"Harry!" Ron says, and his face falls. "You weren't supposed to be here."
+
+"What's going on?" you ask, looking from him to Malfoy.
+
+Ron hesitates for a moment, then draws himself up. "I'm here to challenge Draco Malfoy to a duel. To the death," he adds, in a strained voice.
+
+Malfoy looks stunned but he nods in answer. "Fine by me," he says in a passable imitation of his usual nonchalant drawl. "Draw your ${weapon}, ${pub} keeper."
+
+*label gym_inside
+
+*page_break
+
+You turn to face your friend. "What the fuck, Ron?" you ask. "[i]To the death[/i]? Why?"
+
+Ron struggles with the answer. "Because some lady all dressed in black offered me a lot of money to do it," he says eventually. He fidgets with the clasp of his cloak. "She told me to challenge Malfoy, and to make sure one of us doesn't walk away from the duel, so that's what I'm doing."
+
+"But why are you doing this at all?" you ask. "Think about Hermione and the kids..."
+
+"I am thinking about them!" Ron yells. "Not everyone has the luxury to turn down rich commissions every day like you do. Business is not going well. Did you think I'd be happy to keep living on your charity for the rest of my life?" The tips of his ears are burning bright red. "This way, whatever happens, Hugo and Rose will be set for life. They can get out of ${home}, go to school."
+
+You have no idea Ron felt like that. You're ashamed you didn't notice.
+
+*page_break
+
+"If this is about money," Malfoy says, "I'll pay you double of whatever she offered you." He looks from Ron to you.
+
+"Ron, you don't have to do this," you add.
+
+Ron shakes his head. "I do. I've already taken her ${galleon}s. It's done. On your guard, Malfoy."
+
+You watch in disbelief as Ron and Malfoy bow to each other at opposite ends of the room. They take a dueler's stance. Malfoy has greatly improved in the past few weeks, but Ron used to be a professional duelist before his marriage. What will you do?
+
+*choice
+  #Take Malfoy's side and fight Ron
+    "Wait!" you call out to Ron. "I claim Malfoy's duel, I'll fight you in his stead."
+
+    Ron's face blanches, but he nods. He can't deny that request.
+
+    You wave Malfoy away and take your place in front of Ron.
+
+    "Figures you'd come back," Ron says, giving you a weak smile. "Promise me something, mate? Promise you'll take care of Hermione and the kids."
+    *set UST +20
+    *goto fight_ron
+  #Take Ron's side and fight Malfoy
+    "Wait!" you call out to Ron. "I claim your duel, let me fight Malfoy in your stead."
+
+    *if (Friendship > 50)
+      You think that, if you fight Malfoy yourself, you'll be able to save his life. You can injure him instead of killing him. Surely Ron won't insist on killing a wounded man.
+    *if not(Friendship > 50)
+      If it must come to this, you want the pleasure of fighting Malfoy yourself. You might even be able to save his life if you injure him badly enough. Surely Ron won't insist on killing a wounded man.
+
+    However, Ron shakes his head. "Sorry, mate, I promised to fight this duel myself. Stay out of this."
+    *goto watch_fight
+  #Don't take any sides
+    *if (Friendship > 50)
+      Both Ron and Malfoy are your friends. You can't bring yourself to take sides in this duel.
+    *if not(Friendship > 50)
+      Malfoy is not your friend, but you can't bring yourself to fight him to the death.
+    *goto watch_fight
+
+*label watch_fight
+
+Even with your lessons, it's clear from the start that Malfoy is hopelessly outmatched. He's forced to remain on the defensive, constantly parrying Ron's blows.
+
+Twice Ron has a chance to strike a killing blow but doesn't take it. It seems to you as if Ron, despite his bravado, is reluctant to take Malfoy's life. But it's only a matter of time before he musters the courage to do it.
+
+Ron eventually backs Malfoy into a corner. His mouth is set in a hard line as he raises his ${weapon} and points the tip at Malfoy's heart. Malfoy is petrified by fear.
+
+*choice
+  #Fight Ron to protect Malfoy
+    "Wait!" you cry, throwing yourself between Ron and Malfoy.
+
+    "Step away, Harry," Ron says in a strangled voice. "I've got to do it."
+
+    "I won't let you," you say, drawing your sword. "I'll fight you in his place."
+
+    Ron gives you a weak smile, as if he'd expected this to happen all along. He nods. "Promise me something, mate? Promise you'll take care of Hermione and the kids."
+    *set UST +10
+    *goto fight_ron
+  #Ask Ron to spare Malfoy
+    "Ron!" you call out. "Don't do it. You're not a murderer."
+
+    Ron doesn't take his eyes off Malfoy. "I'm a duelist," he says. "It's the same thing."
+
+    "We fight other duelists," you insist. "Not noblemen who don't know how to defend themselves. Please..."
+
+    He shakes his head. "I'm sorry," he says as his ${weapon2} pierces Malfoy's heart. You don't know if Ron's talking to him or to you.
+
+    *page_break
+    *goto ron_fallout
+  #Stay out of it
+    You can't bring yourself to watch as Ron's ${weapon2} pierces Malfoy's heart.
+    *goto ron_fallout
+
+*label ron_fallout
+
+You and Ron don't talk to each other as you walk home. You think you've made the right choice, because you could never bring yourself to fight your best friend, but at the same time you can't believe Malfoy is dead.
+
+Your friendship with Ron becomes strained after that. Eventually, Hermione gets the whole story out of you. She's furious that Ron lied to her, and even more furious that he broke his promise about not dueling any more. She throws Ron out of the house, and Ron blames you for it. Eventually, Ron leaves ${town} and you never see him again.
+
+You, Harry Potter, live out the rest of your days in the tiny garret room above the ${pub}. You quit your career as a duelist and you help Hermione with taking over the ${pub} and raising her kids. But you have the lingering feeling that she resents you for the destruction of her marriage, and for missing Malfoy more than you miss Ron.
+
+[b]GAME OVER[/b]
+*ending
+
+*label fight_ron
+
+"Don't be stupid," you spit out. "I'm not going to kill you."
+
+"It's to the death," Ron insists. "It's either you or me, and you're the best fucking duelist in ${town}. I don't see it ending any other way."
+
+*page_break
+
+Ron is right: you are a way better duelist than him. Ron is out of shape, he hasn't fought a real duel in years, and besides you've taught him every single trick that he knows.
+
+He's coming at you with everything he has, though, so you can't go easy on him. At first you try to fend him off without hurting him, but his attacks are increasingly lethal. He's fighting for his life.
+
+It's a valiant effort, but soon you have him cornered.
+
+"Yield," you plead. "Let's stop this madness here."
+
+"I can't," Ron says, stubborn, even though his eyes are wide with fear.
+
+You can see that there is no way out: Ron will not stop until his contract is fulfilled and someone is dead.
+
+*choice
+  #Kill Ron
+    What you have to do repulses you, but you can see that there is no alternative. Ron himself knew it would come to this when he insisted on fighting to the death.
+
+    You steel yourself and raise your ${weapon} for one last attack. The ${weapon2} pierces Ron through the heart, and he crumples to the ground without a sound.
+
+    As you stand over the lifeless form of your best friend, you're assaulted by regret. Was this the only possible outcome? To kill or to be killed? Malfoy tries to talk to you, but you wrap your cloak around yourself and run out into the night.
+
+    You, Harry Potter, will not be able to face Hermione, or any of your friends. You will leave ${town} that same night and never return. You will end your days fighting duels in a foreign country, but even there you will never be able to escape the guilt and regret that you feel.
+
+    *ending
+  #Don't kill Ron
+    *goto everyone_lives
+  #Let Ron kill you instead
+    You can't bring yourself to kill your best friend. You step back and you let him recover some ground. You exchange blows for another while, but your heart is not into it any more.
+
+    When Ron raises his ${weapon} for another attack, you see what he's about to do but you do nothing to stop his ${weapon2}. It hits you straight through the heart, and as your consciousness fades you feel proud that Ron remembered your signature move so well. Ron cries out when he realizes what's happened, and Malfoy rushes forward to catch you as you fall, but you're already gone.
+
+    You, Harry Potter, are dead. You will never know who is the mysterious noblewoman who paid Ron to fight this duel. You will not find out what happens to Ron, to Draco, or to anyone else. The people of ${town} will remember you, though, and for years to come there will be speculation over the events of your last, fateful duel.
+
+    [b]GAME OVER[/b]
+    *ending
+
+*label everyone_lives
+
+You raise your ${weapon}, but you can't bring yourself to kill Ron. "I can't," you say in a low tone. "We grew up together, you're my best friend!"
+
+He swallows. "Do it," he says. "You've got a new best friend now."
+
+You shake your head. "It doesn't work like this. I can't do it."
+
+"You have to," Ron says. "If you try to back down, I'll kill you. I promised my client. One of us won't walk away from this duel.
+
+You consider this for a while. "All right," you mutter, coming to a decision.
+
+*page_break
+
+*if Weapon="sword"
+  You step forward and, before Ron can react, you hit him over the head with the pummel of your sword. He falls down without a sound, and you catch him and lower him gently on the dusty floorboards.
+
+*if Weapon="wand"
+  You step forward and, before Ron can react, you hit him in the chest with a stupefying charm. He falls down without a sound, and you catch him and lower him gently on the dusty floorboards.
+
+Malfoy has been watching the whole scene, and his eyes are wide. "Is he dead?" he asks, eyeing Ron warily.
+
+"Just stunned," you say, shaking your head. Ron looks bruised, and he'll have the devil of a headache when he wakes up, but he's still very much alive. You breathe a sigh of relief.
+
+Malfoy, however, is not as calm as you. "Won't he come after you again when he wakes up?"
+
+"If he does, I'll just knock him down again," you insist. "He challenged you, he fought the duel, and he didn't walk away from it. His client will have to be satisfied with that."
+
+Malfoy still looks unconvinced.
+
+*page_break
+
+You leave Ron passed out on the floor, and you hope that he will be okay, but you can't bring yourself to wake him up because you dread the ensuing confrontation. You and Malfoy leave from the back, in case someone is keeping an eye on the front of the building.
+
+You walk in silence until you've put several streets between yourselves and the dueling school. It's almost dark and the air smells like rain.
+
+Finally, when you're satisfied that nobody is following you, you stop and confront Malfoy about the attempt to kill him.
+
+*choice
+  *if ((malfoy_saw) and (Friendship > 50)) #Ask Malfoy about the black carriage
+    *set crest_explain true
+    "Tell me about the black carriage," you say. He tries to act dumb, but you insist. "When I told you there was a black carriage outside, you said 'she's here'. What does that mean? Who's 'she'?"
+
+    His face falls. "My aunt," he says in a small voice. "Lady Lestrange. We've been arguing lately because of what she calls my dissolute ways... and because of other reasons."
+
+    *if (Friendship > 50)
+      "So she's trying to kill you?" you ask. "Just because she doesn't like you?" The nobility doesn't much value human life, but usually they draw the line at offing their own relatives.
+    *if not(Friendship > 50)
+      "So she's trying to kill you?" you ask. "Just because she doesn't like you?" Draco Malfoy is an insufferable asshole, but that's hardly a reason to want him dead.
+
+    Malfoy shakes his head. "She's a widow and she doesn't have any children. All of her properties will pass to me when she's dead. Not that I want her stuff," he adds, pulling a face.
+
+    *page_break
+
+    "That's messed up," you say. "She should just change her will instead of paying my friend to kill you!"
+
+    "The property is entailed," Malfoy says. Then, seeing your blank face, he rolls his eyes. "It means she can't just leave it to whoever she wants, it will go to the nearest relative. It's an ancient law to make sure that the estate stays within the family."
+
+    "Your laws are crazy," you say, shaking your head.
+
+    "Besides," he says, ignoring your comment, "I'm not even sure that she is the one who sent the duelist."
+
+    The evidence seems pretty damning to you, but Malfoy says he wants to talk to his mother before jumping to any conclusions. She and Lady Lestrange are sisters, and Malfoy says his mother will know what to do.
+
+    *page_break
+
+    "Be careful," you say. "Even if it's not your aunt, someone in this city wants you dead. I'd hate to save your life only for you to die in the next few hours."
+
+    Malfoy gives you a haughty look. "I can take care of myself," he says, despite all evidence pointing to the contrary. Then he gives you a strange look. "Meet me tonight at my place," he says. "I'll tell you what I found out and we can talk more about it."
+
+    *goto goodbyes2
+  *if (not(malfoy_saw) and (Friendship > 50)) #Ask Malfoy who might want to kill him
+    "Who do you think sent Ron after you?" you ask Malfoy.
+
+    Malfoy shakes his head. "I don't know," he says. "I haven't quarreled with anyone lately. It's true!" he insists, as you let out a disbelieving snort. "I can't think of anyone who would want me dead."
+
+    "Anyone?" you insist. "Can't you think of any threats, even made in jest?"
+
+    "No one," Malfoy says, still shaking his head. "Unless..."
+    *goto goodbyes
+  *if (not(Friendship > 50)) #Force Malfoy to tell you what he knows
+    *set Friendship %-10
+    "Who's trying to kill you?" you ask.
+
+    Malfoy shakes his head. "I don't know," he says. "I haven't quarreled with anyone lately..."
+
+    "Bullshit!" you exclaim, and he takes a step back. "Someone paid my best friend to try and kill you, so think long and hard about who might want you dead. Did anyone threaten you? Even in jest?"
+
+    "There's no one," Malfoy squeaks, still shaking his head. "Unless..."
+    *goto goodbyes
+  #Ask if he thinks he'll be in danger again
+    *set Friendship %+10
+    "Do you think you're still in danger?" you ask. "Whoever paid Ron to challenge you might send another duelist."
+
+    "I don't know," he says, shaking his head. "I don't even know who sent your friend. I haven't quarreled with anyone lately."
+
+    You let out a disbelieving snort. "Yes, I'm sure you were charming as always," you say.
+
+    "It's true, I can't think of anyone who would want me dead. Unless..."
+    *goto goodbyes
+  #Offer to protect him
+    *set Friendship %+20
+    Malfoy might be an asshole sometimes, but that's hardly a reason to have him killed. And you don't like the idea of someone paying Ron to fight him while he's alone and defenceless.
+
+    You clear your throat. "Listen, Malfoy. Whoever sent Ron after you might hire another duelist to finish the job. If you need protection..."
+
+    Two spots of colour appear on Malfoy's cheeks as he takes in your meaning. "Your offer is appreciated but unnecessary," he drawls. "I doubt they'll try anything in the streets, and I shall be quite safe in my own home."
+
+    He still looks nervous, though, and it's his stupid pride that stops him from accepting your offer. You try to insist, but Malfoy stops you.
+
+    "There is a person who threatened me recently," he says. "I didn't think she was serious, but..."
+    *goto goodbyes
+  #Punch him for putting Ron in danger
+    *set Friendship %-20
+    You're sure that, if someone wants Malfoy dead, it's because he gave them ample reason to hate him. You draw back your fist and punch him squarely on the nose. The fist connects with a satisfying thump, and Malfoy stumbles back, holding a hand to his bloodied nose.
+
+    "What the hell, Potter?!" he yells.
+
+    "That's for putting Ron in danger," you say.
+
+    He looks at you as if you're a madman. You don't care. The whole thing is his fault. "Me?" Malfoy says, his voice slightly muffles as he tries to stop the bleeding. "It's your friend who tried to kill me!"
+
+    "Who is it?" you ask. "Who did you piss off?"
+
+    "I don't know!" he exclaims. "Do you think I'm not taking this seriously? Someone wants me dead! If I knew who it was, I'd tell you! But there's nobody I quarreled with recently." He pauses, thoughtful. "Unless..."
+    *goto goodbyes
+
+*label goodbyes
+
+*page_break
+
+You wait for him to finish the sentence, but he shakes his head.
+
+"It might be nothing," he said. "I need to talk to my mother before throwing accusations around, she'll know what to do."
+
+Despite your insistence, he refuses to tell you anything more about his suspicions. "Meet me tonight at my place," is all he says. "I'll tell you what I found out and we can talk more about it."
+
+*label goodbyes2
+
+It's the first time Malfoy asks you over. You thought he'd be too proud to ever let a commoner cross the threshold of his house, but he does seem very affected by the day's events. He gives you the address, and you agree to meet there in a few hours.
+
+*finish You say your goodbyes...
