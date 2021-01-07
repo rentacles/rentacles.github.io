@@ -1,0 +1,136 @@
+*title Duelist's Choice
+*author Anonymous
+*scene_list
+  startup
+  pub
+  bookstore
+  ron
+  bellatrix
+
+*create Name "Harry Potter"
+*create Home ""
+*create Weapon ""
+*create UST 0
+*create Friendship 50
+
+*create Weapon2 ""
+*create Town "London"
+*create galleon "galleon"
+*create sickle "sickle"
+*create knuts "knuts"
+*create pub "pub"
+*create butterbeer "butterbeer"
+*create paper "parchment"
+*create auror "auror"
+*create parliament "the Wizengamot"
+*create mainstreet "Diagon Alley"
+*create healer "Healer"
+*create hexes "hexes"
+
+*create bellatrix_letter false
+*create malfoy_saw false
+*create crest_explain false
+
+*label choiceschoiceschoices
+
+[i]You are Harry Potter, the greatest professional duelist in your city. Lately it seems that all you do is finishing the fights that Draco Malfoy starts. What happens next is up to you...[/i]
+
+This is a fic in the form of a Choose Your Own Adventure, based on the book [i]Swordspoint[/i] by Ellen Kushner. At several points in the text you will be asked to pick between two or more options, and your choice will influence how the story continues.
+
+Will you manage to get together with Malfoy, or will a wrong choice lead to your untimely demise? There are over a dozen different endings to the story. If you get a game over, you can always restart and pick a different path.
+
+What would you like to do now?
+
+*choice
+  #Start playing
+    *goto startthegame
+  #Read the Warnings
+    Warning: the bad endings (the ones labeled "game over") contain character death.
+
+    Choose Your Own Adventure books are infamous for killing off the protagonist in stupid ways, so I wanted to do something in that spirit. All those death scenes are very brief, just a paragraph saying something like "you made the wrong choice and now Malfoy is dead, oops", and they're not meant to be too serious/angsty. However, if you're sensitive to this, take care because three main characters die in different ways in various bad endings.
+
+    In the good endings (the ones labeled "the end"), all of the characters survive.
+
+    The story is rated PG-13.
+    *page_break Go back
+    *goto choiceschoiceschoices
+  #Read the Acknowledgements
+    Thank you to the mods of the H/D Fan Fair for their patience and encouragement; this story literally wouldn't exist if you hadn't said "no pressure".
+
+    Thank you firethesound for the prompt! I tried to include all your additions (including Malfoy with glasses!) even though in the end I went with a full AU rather than EWE. I hope you'll still enjoy the story.
+
+    Thank you to my posse of beta testers, who played through the game multiple times even when it was still half-finished. Ing, I'm sorry I had to cut out the hate sex due to time constraints, I hope the hate kiss makes up for it at least a bit. Evy, I'm going to give you the source files if you promise not to try and map the whole game, because that way lies only madness. Isa, stop killing Ron!
+
+    Thank you to Choice of Games for creating ChoiceScript; this story might have existed without them, but with a lot less choices and stupid endings, and that would have been a tragedy (for me). No thanks to Choice of Games for making me waste whole afternoons playing their other games, that was not productive at all.
+
+    Thank you Joe Dever for writing the [i]Lone Wolf[/i] series, my favourite Choose Your Own Adventure books when I was growing up. Thank you Ellen Kushner for writing [i]Swordspoint[/i] and thank you Jo Rowling for writing [i]Harry Potter[/i], and sorry for smushing them together. (Though after finishing this fic I found out that Ellen Kushner began her writing career by writing four Choose Your Own Adventure books, so I'm thinking this was meant to be.)
+    *page_break Go back
+    *goto choiceschoiceschoices
+  #Leave a comment on the fic
+    Thank you! Unfortunately ChoiceScript doesn't allow hyperlinks, so please copy those URLs into your address bar to leave a comment on the site you prefer. All comments and feedback are very much appreciated!
+
+    On AO3:
+    http://archiveofourown.org/works/2461829
+
+    On LJ:
+    http://hd-fan-fair.livejournal.com/92159.html
+    *page_break Go back
+    *goto choiceschoiceschoices
+
+*label startthegame
+
+The snow is falling as you walk home alone on a winter night.
+
+It's freezing, and there isn't anyone out in the streets: everyone has long ago retreated to the warmth of their homes. You quicken your pace and you wrap your cloak more tightly around yourself to keep out the cold wind.
+
+You also hope to be home soon. Your place is not very comfortable, but the roof over your head will keep you dry and warm at least. Speaking of which... where do you live?
+
+*choice
+  #London
+    *set Home "Knockturn Alley"
+    You have rooms over a seedy pub in Knockturn Alley. It's a disreputable part of London, but it's cheap, and that's all you care about.
+    *goto choose_weapon
+  #Riverside
+    *set Town "the City"
+    *set Home "Riverside"
+    *set galleon "sovereign"
+    *set sickle "coin"
+    *set knuts "pennies"
+    *set pub "tavern"
+    *set butterbeer "mulled wine"
+    *set paper "paper"
+    *set auror "constable"
+    *set parliament "the Council"
+    *set mainstreet "Main Street"
+    *set healer "doctor"
+    *set hexes "stabs"
+    You have rooms over a seedy tavern in Riverside. It's an unsavoury quarter of the city, but it's cheap, and that's all you care about.
+    *goto choose_weapon
+
+*label choose_weapon
+
+The coins in your pocket jingle happily as you walk. A man carrying money, alone at night in this kind of place, is just asking to be robbed. But not you. Crooks in ${home} know you, and they know that you're more trouble than you're worth. After all, you kill people for a living.
+
+You're Harry Potter, the most famous duelist in the city. This country's traditions demand that noblemen challenge each other to a duel to defend their honour. However the noblemen don't want to risk their precious lives actually fighting their own duels, so they hire professional duelists such as yourself to fight in their place.
+
+The weapon of choice in a duel is...
+
+*choice
+  #the sword
+    *set Weapon "sword"
+    *set Weapon2 "blade"
+    What even is a wand? The sword is the gentleman's weapon of choice. Yours is made of the finest steel, and you sharpen the blade yourself every day after practice. Your style of dueling is simple but lethal. You've built a reputation for dispatching an opponent with one single strike through the heart.
+    *goto landing
+  #the wand
+    *set Weapon "wand"
+    *set Weapon2 "spell"
+    Only Muggles would resort to crude weapons like swords, or even worse, fisticuffs. The wand is the wizard's (or witch's) only weapon. You're a master of both offensive and defensive spells. Your style is very simple, you eschew theatrics and flamboyant frills. You've built a reputation for dispatching an opponent with one simple, well-aimed spell.
+    *goto landing
+
+*label landing
+
+In the past couple of years you've become the darling of the aristocracy, and they're all trying to secure your services. This allows you to pick and choose your clients, and to command exorbitant fees. You disdain the indolent aristocrats and their petty quarrels and you refuse most of the requests that come your way... But when you do accept an engagement, you make sure you're well paid for your trouble.
+
+Tonight you were hired by Lord Zabini and you fought two opponents at the same time. You dispatched them both in a matter of minutes, and the ${galleon}s in your pocket will take care of rent for the next couple of months.
+
+*finish You finally reach your street...
