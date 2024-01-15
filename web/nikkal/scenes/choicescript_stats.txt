@@ -1,0 +1,41 @@
+*temp time_text
+*if time = 0
+  *set time_text "You just woke up."
+*elseif time = 1
+  *set time_text "It's early morning. The entire day is in front of you."
+*elseif time = 2
+  *set time_text "It's late morning. Still plenty of time in the day."
+*elseif time = 3
+  *set time_text "It's lunchtime."
+*elseif time = 4
+  *set time_text "It's early afternoon. Still some time to kill before your meeting."
+*elseif time = 5
+  *set time_text "It's late afternoon. You may have just enough time for one thing before your meeting in the forest."
+*elseif time = 6
+  *set time_text "It's evening. You made plans to meet Kingu in the forest."
+*else
+  *set time_text "TIME=??? (THIS OPTION SHOULD NOT EXIST, LET ME KNOW SO I CAN FIX THIS FUCKUP)"
+
+*temp outfit_text
+*if outfit = 0
+  *set outfit_text "You should get dressed."
+*elseif outfit = 1
+  *set outfit_text "You are wearing an elegant green dress embroidered with flowers."
+*elseif outfit = 2
+  *set outfit_text "You are wearing a long, flowy dress and no underwear."
+*elseif outfit = 3
+  *set outfit_text "You are wearing a very short, skimpy red dress."
+*elseif outfit = 4
+  *set outfit_text "You are wearing a dark leather outfit with a tightly laced corset that shows off your figure."
+*else
+  *set outfit_text "OUTFIT=??? (THIS OPTION SHOULD NOT EXIST, LET ME KNOW SO I CAN FIX THIS FUCKUP)"
+
+${time_text}
+
+${outfit_text}
+ 
+*if outfit_dirty
+  "Your clothes got dirty doing you know what. They smell rather... unpleasant. You should get changed."
+
+*if su_upset
+  "Su is upset with you. You should find her and apologize."

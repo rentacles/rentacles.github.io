@@ -1,0 +1,17 @@
+Where to go?
+
+*choice
+  #Niall's office
+    *goto_scene office
+  #Teacher's lounge
+    *goto_scene teacher_lounge
+  #Music classroom
+    *goto_scene music_room
+  #The greenhouse
+    *goto_scene greenhouse
+  #Your room
+    *goto_scene your_room
+  #Su's room
+    *goto_scene su_room
+  #The forest
+    *goto_scene forest
