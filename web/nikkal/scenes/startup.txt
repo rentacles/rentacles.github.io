@@ -80,14 +80,14 @@ What would you like to wear?
     *set outfit 3
     There's barely enough fabric in this little red piece for it to qualify as a dress. The plunging neckline shows off your cleavage.
 
-    It's maybe not the most appropriate outfit for the academy, but it will surely turn heads!
+    It may not be the most appropriate outfit for the academy, but it will surely turn heads!
 
     *image images/outfit3-skimpy.jpg
 
     *goto confirm_outfit
   #Dark leather outfit
     *set outfit 4
-    You put on your training outfits. It doesn't offer much protection during a fight (let's be honest it offers no protection at all) but the tight leather corset makes you look good, and that's the main thing to consider when choosing armor.
+    You put on your training outfit. It doesn't offer much protection during a fight (let's be honest it offers no protection at all) but the tight leather corset makes you look good, and that's the main point to consider when choosing armor.
 
     It takes you a while to wriggle into the outfit, and you can't breathe very well after lacing yourself up, but it's worth it. Probably.
 
@@ -102,7 +102,7 @@ You look at yourself in the mirror. Is this what you want to wear?
 *choice
   #Yes, this outfit looks good
     *goto breakfast
-  #No, I want to try on something else
+  #No, I want to wear something else
     *goto wardrobe
     
 *label breakfast
@@ -111,5 +111,5 @@ Once you're ready, you go to the cafeteria and have a hearthy breakfast, because
 
 Unfortunately, you don't see any of your love interests around. How annoying that they all act like they have jobs instead of being always available when you want them. If you want to get laid, you will have to track them down first.
 
-*finish You consider your options
+*finish You consider your options...
 

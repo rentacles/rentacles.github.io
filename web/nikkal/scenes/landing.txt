@@ -1,5 +1,7 @@
 Where to go?
 
+NOTE: UNFINISHED GAME, CHOOSING ANY OF THOSE OPTIONS ENDS THE GAME
+
 *choice
   #Niall's office
     *goto_scene office
