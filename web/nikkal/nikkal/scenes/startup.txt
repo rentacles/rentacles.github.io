@@ -1,0 +1,123 @@
+*title Nikkal's Very Normal, Very Sexy Day
+*author Ren
+*scene_list
+  startup
+  landing
+  office
+  greenhouse
+  teacher_lounge
+  music_room
+  your_room
+  su_room
+  forest
+  irkalla
+
+*create time 0
+*create time_text "You just woke up."
+
+*create outfit 0
+*create outfit_text "You should get dressed."
+*create outfit_dirty false
+
+*create su_upset false
+
+*label thebeginning
+
+[i]You're an unreliable, awkward fire mage, and you just happen to be a complete ho![/i]
+
+Hello! This is an AU where everyone is alive and living happily at the academy. Nikkal never locked in any love interests and spends her days hoeing around. The goal is to have sex with everyone before the end of the day. But you can ignore that and just do whatever. I don't care. I'm not your mother. Do whatever you want.
+
+*choice
+  #Start playing
+    *goto startthegame
+  #Read the notes and content warnings
+    This story contains a bunch of questionable junk, including but not limited to: bad words, unprotected sex, sex with a dragon, mentions of death, and various mentions of nasty bodily fluids. Do not do this in real life (especially the dragon thing).
+
+    You should not take this story seriously (I don't) but if you believe I forgot something that should be on the list above, please let me know.
+
+    [i]The Flower from Tiamat's Fire[/i] and all its characters belong to Romance Club and Your Story Interactive. I'm just borrowing them for funsies and I'm making no money from this.
+
+    Nikkal's outfits were generated using AI. I do not approve of using AI instead of hiring an actual human artist, but since this is a personal project with zero budget I figured what the heck, it beats writing 500 words to describe clothes.
+
+    You're welcome, and also I'm sorry.
+
+    *page_break Go back
+    *goto thebeginning
+
+*label startthegame
+
+You wake up early for a change.
+
+Yesterday you received a message from Kingu, asking to meet this evening at your secret spot in the forest. It seems he has something important that he wants to show to you. You haven't seen Kingu in several days, ever since he left on a mysterious trip and you're curious to find out more.
+
+In the meantime, you wonder how you can spend the time until this evening. You wash and wander around your room looking for clean clothes.
+
+There is a fresh pile of laundry in a basket near the door. You usually throw away your ruined outfits (there are always new ones available, somehow) but last week Su lectured you about wastefulness. It seems she took it upon herself to clean and mend your clothes that were stained with various combinations of mud, blood, and other bodily fluids. Fighting Anunnaki in the forest and then having celebratory sex sure does a number on your dresses.
+
+*page_break Go to wardrobe
+
+It's time for the first and most important choice of the day: picking an outfit.
+
+*label wardrobe
+What would you like to wear?
+
+*choice
+  #Elegant green dress
+    *set outfit 1
+    *set outfit_text "You are wearing an elegant green dress embroidered with flowers."
+    This ensemble is more suited to a fancy gala or celebration than to everyday life at the academy, and it takes you forever to put it on because it has so many layers and fiddly little buttons that you have to fasten.
+
+    However, it looks great on you and it will make you stand out.
+
+    *image images/outfit1-elegant.jpg
+
+    *goto confirm_outfit
+  #Flowy white dress
+    *set outfit 2
+    *set outfit_text "You are wearing a long, flowy dress and no underwear."
+    This delicate silk dress is perfect for a summer day. Unfortunately, the fabric is so lightweight that it shows the outline of your underwear. If you want to wear this, you will have to forgo your panties.
+
+    Ah well... you weren't planning to keep your panties on for long, weren't you?
+
+    *image images/outfit2-flowy.jpg
+
+    *goto confirm_outfit
+  #Skimpy red dress
+    *set outfit 3
+    *set outfit_text "You are wearing a very short, skimpy red dress."
+    There's barely enough fabric in this little red piece for it to qualify as a dress. The plunging neckline shows off your cleavage.
+
+    It may not be the most appropriate outfit for the academy, but it will surely turn heads!
+
+    *image images/outfit3-skimpy.jpg
+
+    *goto confirm_outfit
+  #Dark leather outfit
+    *set outfit 4
+    *set outfit_text "You are wearing a dark leather outfit with a tightly laced corset that shows off your figure."
+    You put on your training outfit. It doesn't offer much protection during a fight (let's be honest it offers no protection at all) but the tight leather corset makes you look good, and that's the main point to consider when choosing armor.
+
+    It takes you a while to wriggle into the outfit, and you can't breathe very well after lacing yourself up, but it's worth it. Probably.
+
+    *image images/outfit4-leather.jpg
+
+    *goto confirm_outfit
+
+*label confirm_outfit
+
+You look at yourself in the mirror. Is this what you want to wear?
+
+*choice
+  #Yes, this outfit looks good
+    *goto breakfast
+  #No, I want to wear something else
+    *goto wardrobe
+    
+*label breakfast
+
+Once you're ready, you go to the cafeteria and have a hearthy breakfast, because you need to keep your strength up if you want to spend the day hoeing around. Because of course you plan to spend the day being a ho. That's pretty much all you can do, aside from saving the world, and it seems that the world is doing just fine for now.
+
+Unfortunately, you don't see any of your love interests around. How annoying that they all act like they have jobs instead of being always available when you want them. If you want to get laid, you will have to track them down first.
+
+*finish You consider your options...
+

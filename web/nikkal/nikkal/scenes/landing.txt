@@ -1,0 +1,48 @@
+*set time + 1
+
+*if time = 1
+    *set time_text "It's early morning. The entire day is in front of you."
+    *goto where_to_next
+*elseif time = 2
+    *set time_text "It's late morning. Still plenty of time in the day."
+    *goto where_to_next
+*elseif time = 3
+    *set time_text "It's lunchtime."
+    *goto where_to_next
+*elseif time = 4
+    *set time_text "It's early afternoon. Still some time to kill before your meeting."
+    *goto where_to_next
+*elseif time = 5
+    *set time_text "It's late afternoon. You may have just enough time for one thing before your meeting in the forest."
+    *goto where_to_next
+*elseif time = 6
+    *set time_text "It's evening. You made plans to meet Kingu in the forest."
+    *goto where_to_next
+*else
+    *set time_text "TIME=??? (THIS OPTION SHOULD NOT EXIST, LET ME KNOW SO I CAN FIX THIS FUCKUP)"
+
+*label where_to_next
+
+${time_text}
+
+Where do you want to go?
+
+NOTE: UNFINISHED GAME, CHOOSING ANY OF THOSE OPTIONS ENDS THE GAME
+
+*choice
+  #Wait (TESTING ONLY)
+    *goto_scene landing
+  #Niall's office
+    *goto_scene office
+  #Teacher's lounge
+    *goto_scene teacher_lounge
+  #Music classroom
+    *goto_scene music_room
+  #The greenhouse
+    *goto_scene greenhouse
+  #Your room
+    *goto_scene your_room
+  #Su's room
+    *goto_scene su_room
+  #The forest
+    *goto_scene forest
