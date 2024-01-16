@@ -13,8 +13,12 @@
   irkalla
 
 *create time 0
+*create time_text "You just woke up."
+
 *create outfit 0
+*create outfit_text "You should get dressed."
 *create outfit_dirty false
+
 *create su_upset false
 
 *label thebeginning
@@ -60,6 +64,7 @@ What would you like to wear?
 *choice
   #Elegant green dress
     *set outfit 1
+    *set outfit_text "You are wearing an elegant green dress embroidered with flowers."
     This ensemble is more suited to a fancy gala or celebration than to everyday life at the academy, and it takes you forever to put it on because it has so many layers and fiddly little buttons that you have to fasten.
 
     However, it looks great on you and it will make you stand out.
@@ -69,6 +74,7 @@ What would you like to wear?
     *goto confirm_outfit
   #Flowy white dress
     *set outfit 2
+    *set outfit_text "You are wearing a long, flowy dress and no underwear."
     This delicate silk dress is perfect for a summer day. Unfortunately, the fabric is so lightweight that it shows the outline of your underwear. If you want to wear this, you will have to forgo your panties.
 
     Ah well... you weren't planning to keep your panties on for long, weren't you?
@@ -78,6 +84,7 @@ What would you like to wear?
     *goto confirm_outfit
   #Skimpy red dress
     *set outfit 3
+    *set outfit_text "You are wearing a very short, skimpy red dress."
     There's barely enough fabric in this little red piece for it to qualify as a dress. The plunging neckline shows off your cleavage.
 
     It may not be the most appropriate outfit for the academy, but it will surely turn heads!
@@ -87,6 +94,7 @@ What would you like to wear?
     *goto confirm_outfit
   #Dark leather outfit
     *set outfit 4
+    *set outfit_text "You are wearing a dark leather outfit with a tightly laced corset that shows off your figure."
     You put on your training outfit. It doesn't offer much protection during a fight (let's be honest it offers no protection at all) but the tight leather corset makes you look good, and that's the main point to consider when choosing armor.
 
     It takes you a while to wriggle into the outfit, and you can't breathe very well after lacing yourself up, but it's worth it. Probably.
