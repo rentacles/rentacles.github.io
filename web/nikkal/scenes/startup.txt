@@ -18,8 +18,24 @@
 *create outfit 0
 *create outfit_text "You should get dressed."
 *create outfit_dirty false
+*create outfit_changed false
 
+*create niall_status "none"
+*create niall_disapproval 0
+*create su_status "none"
 *create su_upset false
+*create iyar_status "none"
+*create kingu_status "none"
+
+*create found_empty_room false
+
+*achievement lecture visible 10 Lectured
+  Piss off Niall.
+  The warden was not impressed with you.
+
+*achievement sex_niall visible 10 War-done
+  Have sex with Niall.
+  You had sex with Niall.
 
 *label thebeginning
 
@@ -50,7 +66,7 @@ You wake up early for a change.
 
 Yesterday you received a message from Kingu, asking to meet this evening at your secret spot in the forest. It seems he has something important that he wants to show to you. You haven't seen Kingu in several days, ever since he left on a mysterious trip and you're curious to find out more.
 
-In the meantime, you wonder how you can spend the time until this evening. You wash and wander around your room looking for clean clothes.
+In the meantime, you wonder how you can spend the time until this evening. You take a bath and then wander around your room looking for clean clothes.
 
 There is a fresh pile of laundry in a basket near the door. You usually throw away your ruined outfits (there are always new ones available, somehow) but last week Su lectured you about wastefulness. It seems she took it upon herself to clean and mend your clothes that were stained with various combinations of mud, blood, and other bodily fluids. Fighting Anunnaki in the forest and then having celebratory sex sure does a number on your dresses.
 
@@ -77,7 +93,7 @@ What would you like to wear?
     *set outfit_text "You are wearing a long, flowy dress and no underwear."
     This delicate silk dress is perfect for a summer day. Unfortunately, the fabric is so lightweight that it shows the outline of your underwear. If you want to wear this, you will have to forgo your panties.
 
-    Ah well... you weren't planning to keep your panties on for long, weren't you?
+    Ah well… you weren't planning to keep your panties on for long, were you?
 
     *image images/outfit2-flowy.jpg
 
@@ -115,9 +131,8 @@ You look at yourself in the mirror. Is this what you want to wear?
     
 *label breakfast
 
-Once you're ready, you go to the cafeteria and have a hearthy breakfast, because you need to keep your strength up if you want to spend the day hoeing around. Because of course you plan to spend the day being a ho. That's pretty much all you can do, aside from saving the world, and it seems that the world is doing just fine for now.
+Once you're ready, you go to the cafeteria and have a hearthy breakfast, because you need to keep your strength up if you want to hoe around all day. Of course you plan to spend the day being a ho. That's pretty much all you know, aside from saving the world, and the world is doing just fine for now.
 
 Unfortunately, you don't see any of your love interests around. How annoying that they all act like they have jobs instead of being always available when you want them. If you want to get laid, you will have to track them down first.
 
-*finish You consider your options...
-
+*finish You consider your options…

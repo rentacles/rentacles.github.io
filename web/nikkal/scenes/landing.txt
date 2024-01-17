@@ -2,28 +2,30 @@
 
 *if time = 1
     *set time_text "It's early morning. The entire day is in front of you."
-    *goto where_to_next
+    *goto some_intro_text
 *elseif time = 2
     *set time_text "It's late morning. Still plenty of time in the day."
-    *goto where_to_next
+    *goto some_intro_text
 *elseif time = 3
-    *set time_text "It's lunchtime."
-    *goto where_to_next
+    *set time_text "It's noon."
+    *goto some_intro_text
 *elseif time = 4
     *set time_text "It's early afternoon. Still some time to kill before your meeting."
-    *goto where_to_next
+    *goto some_intro_text
 *elseif time = 5
     *set time_text "It's late afternoon. You may have just enough time for one thing before your meeting in the forest."
-    *goto where_to_next
+    *goto some_intro_text
 *elseif time = 6
     *set time_text "It's evening. You made plans to meet Kingu in the forest."
-    *goto where_to_next
+    *goto some_intro_text
 *else
-    *set time_text "TIME=??? (THIS OPTION SHOULD NOT EXIST, LET ME KNOW SO I CAN FIX THIS FUCKUP)"
+    *set time_text "It's the middle of the night."
 
-*label where_to_next
+*label some_intro_text
 
 ${time_text}
+
+*label where_to_next
 
 Where do you want to go?
 

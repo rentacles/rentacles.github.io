@@ -1,10 +1,35 @@
+*temp niall_text "- Niall"
+*temp su_text "- Su"
+*temp iyar_text "- Iyar"
+*temp kingu_text "- Kingu"
+
+*if niall_status = "sex"
+  *set niall_text &": DONE"
+*if su_status = "sex"
+  *set su_text &": DONE"
+*if iyar_status = "sex"
+  *set iyar_text &": DONE"
+*if kingu_status = "sex"
+  *set kingu_text &": DONE"
+
 *label text_notes
+NIKKAL'S TO DO LIST:
+
+${niall_text}
+
+${su_text}
+
+${iyar_text}
+
+${kingu_text}
+
 ${time_text}
 
 ${outfit_text}
  
 *if outfit_dirty
-  "Your clothes got dirty doing you know what. They smell rather... unpleasant. You should get changed."
+  Your clothes got dirty doing you know what. They smell rather… unpleasant. You should get changed.
 
 *if su_upset
-  "Su is upset with you. You should find her and apologize."
+  Su is upset with you. You should find her and apologize.
+
