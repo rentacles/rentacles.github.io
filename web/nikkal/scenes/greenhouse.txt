@@ -1,0 +1,210 @@
+You step into the greenhouse.
+
+*if (time > 3)
+    You were hoping to run into Niall, but nobody is here and the desk that sometimes he uses is empty. You walk around for a while, looking at all the plants whose name you never bothered to learn, but eventually you give up.
+
+    No point standing around idly. Time is ticking and you have many handsome people to romance.
+
+    *goto_scene landing
+
+*if (niall_status = "sex")
+    Niall is still busy with his work. "I'm sorry, Little Sparkle, I really need to finish this by today."
+
+    It doesn't look like you'll be able to distract him again.
+
+    *goto_scene landing where_to_next
+
+*if (niall_status = "lectured") or (niall_status = "seduced")
+    Niall is still busy with his work, but he looks up with a small smile when he sees it's you.
+
+    "Have you come to distract me again?" he says. "I haven't been able to get any work done ever since you left."
+
+    His gaze is burning.
+
+    *goto niall_consent
+
+Niall is sitting at a desk wedged between two large ferns, bent over a pile of papers as usual. He's in the middle of writing something, but he looks up and flashes you a quick smile when he sees it's you.
+
+"Hello, Little Sparkle," he says. "Can you give me a moment? I'm in the middle of something."
+
+He gestures vaguely towards a chair in front of his desk.
+
+You sit down…
+
+*choice
+    #in the chair
+        You sit down and wait while Niall deals with his correspondence. After what feels like forever, but was only about three minutes, Niall puts down his pen and seals the letter in an envelope.
+
+        He turns to you with a smile, finally taking you in.
+        *goto niall_judge_clothes
+    #on Niall's desk
+        You sit down his desk. A couple of papers crumple under your butt.
+
+        Niall gives you a long-suffering look and shakes his head. "Little Sparkle, I'm trying to get some work done…"
+
+        He gently pushes you aside and carefully smoothes out the sheets of paper. His eyes linger on you.
+        *set niall_disapproval + 1
+        *goto niall_judge_clothes
+    #in Niall's lap
+        You wrap one arm around Niall's broad shoulders and plop down in his lap, smiling up at him. "But I'm here [i]now[/i]," you say, teasing.
+
+        Niall does not return your smile. "Little Sparkle," he sighs, a warning note in his tone.
+
+        He gently pushes you off. Despite himself, his eyes are drawn to you.
+        *set niall_disapproval + 1
+        *goto niall_judge_clothes
+
+*label niall_judge_clothes
+
+*if (outfit = 1) or (outfit = 2)
+    "You look very beautiful today," he says.
+
+    "Only today?" you tease him.
+
+    He gives a quiet snort of laughter and pulls you in for a brief kiss. "You always look beautiful," he says against your lips. "Have you come to torment me? I have so much work to do today, and no time for you at all."
+    *goto niall_dialog
+
+*if (outfit = 3) or (outfit = 4)
+    *set niall_disapproval + 1
+    "Nikkal," he says. His brows crease into a frown. "I asked you to wear more appropriate clothes for the academy. This is… extremely revealing."
+
+    He motions with one hand in the general direction of your boobs, which are threatening to burst out of your top.
+
+    "I thought you liked this outfit," you say.
+
+    *if niall_disapproval = 2
+        *goto niall_lecture
+    
+    He sighs. "I do like it," he says. "I also like to see you naked. It doesn't mean it's an appropriate look inside the academy."
+
+    You want to tease him more, but you are afraid it might prompt another of his lectures, so you bite your tongue.
+
+    "I'm very busy today," Niall continues. "I'm afraid I don't have time for you at all." He says the last part with some regret. His eyes keep straying towards your body.
+    *goto niall_dialog
+    
+*label niall_dialog
+You…
+
+*choice
+    #offer Niall to help with his work
+        Niall was not expecting you to say that. "You? Offering to do some work? Is it possible that I had a good influence on you after all…?"
+
+        You punch him in the arm. "You make it sound like I never do anything."
+
+        He gives you an affectionate look. "It's very kind of you to offer, Little Spark. Especially knowing how much you hate paperwork."
+
+        "Don't be so surprised," you tell him. "I wanted to spend some time together. If I help you, you'll be done sooner, and then we can do something more fun than paperwork."
+
+        "I…" Niall starts saying something, then falters. In a sudden movement, he pulls you close to him. He sighs. "You're just trying to distract me, aren't you?"
+
+        You look up at him. "If I am… is it working?"
+
+        "Most definitely," Niall says, leaning down to kiss you.
+        *goto niall_consent
+    #complain that his work is boring
+        "Come ooon, Niall! I'm bored!" you pout. "The world isn't going to end if you step away from your office for a minute or two."
+
+        Niall leans back in his chair and rubs his eyes with his palm. "Nikkal, you're acting like a child."
+
+        "But…"
+        *goto niall_lecture
+    #tell him you want to spend more time together
+        "I missed you," you tell him. "I know you're busy with your work, but it feels like it's been forever since we've been… you know… together…"
+
+        "We did it yesterday," Niall points out. "Twice."
+
+        You pout. "But it feels like forever!"
+
+        Niall is trying to look stern, but you can see his resolve fading. You go in for the kill, stepping closer and pressing yourself against Niall.
+
+        "I'll sit in a corner and keep you company while you work," you say, batting your eyelashes. "Come on, Niall, you'll hardly notice that I'm here!"
+
+        Niall sighs and wraps one arm around your waist. "I don't think it's possible for anyone to ignore you, Little Sparkle."
+
+        Your retort is swallowed by his kiss.
+        *goto niall_consent
+    #don't say anything, just start stripping
+        Niall just stares at you for a moment, frozen in confusion.
+
+        "By the…! Nikkal, what are you doing?" he exclaims. He throws a panicked look towards the door. "Stop! Anyone could walk in…"
+
+        So much for your brilliant idea.
+        *goto niall_lecture
+
+
+*label niall_lecture
+*achieve lecture
+
+Niall sighs and shakes his head. "Even though we're in a relationship, it doesn't mean I can neglect my work…"
+
+He embarks on a very familiar lecture. You've heard it hundreds of times, but sometimes you can't help yourself.
+
+"…and it's important to preserve the decorum of the academy…"
+
+How can someone with such a nice voice use it for such a boring lecture? What a waste!
+
+"…I expected better from you…"
+
+Irkalla, he's never going to stop talking.
+
+"…will you? Nikkal? Nikkal, are you even listening to me?"
+
+*fake_choice
+    #"Oh! Uh?"
+    #"Yes, Niall, I'm very sorry."
+    #(mumbling) "Yes…"
+
+Niall sighs again. "As long as you understand," he says. He glances at the abandoned papers on his desk and shakes his head. "Now you've thoroughly distracted me from work."
+
+You consider this. 
+*choice
+    #"I could make it up to you…"
+        "I'm not sure how to earn your forgiveness," you say. "The warden of this academy has told me in very strong terms that I can't take off my clothes in his office."
+        
+        Niall makes a noise halfway between a laughter and a growl. "You are without a doubt the most infuriating student I've ever had."
+
+        "I thought I was your favorite student?"
+
+        "One does not preclude the other."
+
+        You step into his arms and he kisses you.
+        *set time + 1
+        *goto niall_consent
+    #"I will leave you to your work."
+        His never-ending lecture has killed the mood. You figure it's better to leave.
+
+        Niall nods. "That's for the best. I'll see you later."
+
+        He goes back to his work, and you go look for someone a little less busy.
+        *set niall_status "lectured"
+        *page_break
+        *goto_scene landing
+
+*label niall_consent
+*set niall_status "seduced"
+"Niall, I…"
+*choice
+    #"I want you!"
+        *goto niall_sex
+    #"I should let you work…"
+        There is a hint of disappointment in Niall's eyes, but he nods. "Yes, I should really get this done before I leave for Ur. I'll see you when I get back, Little Sparkle."
+
+        You leave the greenhouse.
+        *goto_scene landing where_to_next
+
+*label niall_sex
+*set niall_status "sex"
+*set fucked +1
+*achieve sex_niall
+
+THEY KISS, THEY HAVE SEX, TRALALA
+
+WRITE IT ALL HERE, WITH WORDS
+
+*set outfit_dirty true
+PLACEHOLDER: your clothes got dirty, you will need to get changed
+
+THEN NIALL SAYS HE HAS TO WORK AND NIKKAL LEAVES
+
+*page_break
+*goto_scene landing

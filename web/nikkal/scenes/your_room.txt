@@ -1,0 +1,80 @@
+*if outfit_dirty
+    You're in desperate need of a bath and a change of clothes. You toss aside your dirty outfit and run yourself a hot bath. Then, you search for something to wear in your rapidly dwindling pile of clean clothes.
+
+    *set outfit_ruined outfit
+    *goto wardrobe
+*else
+    Your room is just as you left it. The bed is unmade and there are clothes strewn on every available surface. Nobody is here.
+    *page_break Nothing do to here
+    *goto_scene landing
+
+*label get_dressed
+It's time for the first and most important choice of the day: picking an outfit.
+
+*label wardrobe
+What would you like to wear?
+
+*choice
+  *selectable_if (outfit_ruined != 1) #Elegant green dress
+    *set outfit 1
+    *set outfit_text "You are wearing an elegant green dress embroidered with flowers."
+    This ensemble is more suited to a fancy gala or celebration than to everyday life at the academy, and it takes you forever to put it on because it has so many layers and fiddly little buttons that you have to fasten.
+
+    However, it looks great on you and it will make you stand out.
+
+    *image images/outfit1-elegant.jpg
+
+    *goto confirm_outfit
+  *selectable_if (outfit_ruined != 2) #Flowy white dress
+    *set outfit 2
+    *set outfit_text "You are wearing a long, flowy dress and no underwear."
+    This delicate silk dress is perfect for a summer day. Unfortunately, the fabric is so lightweight that it shows the outline of your underwear. If you want to wear this, you will have to forgo your panties.
+
+    Ah well… you weren't planning to keep your panties on for long, were you?
+
+    *image images/outfit2-flowy.jpg
+
+    *goto confirm_outfit
+  *selectable_if (outfit_ruined != 3) #Skimpy red dress
+    *set outfit 3
+    *set outfit_text "You are wearing a very short, skimpy red dress."
+    There's barely enough fabric in this little red piece for it to qualify as a dress. The plunging neckline shows off your cleavage.
+
+    It may not be the most appropriate outfit for the academy, but it will surely turn heads!
+
+    *image images/outfit3-skimpy.jpg
+
+    *goto confirm_outfit
+  *selectable_if (outfit_ruined != 4) #Dark leather outfit
+    *set outfit 4
+    *set outfit_text "You are wearing a dark leather outfit with a tightly laced corset that shows off your figure."
+    You put on your training outfit. It doesn't offer much protection during a fight (let's be honest it offers no protection at all) but the tight leather corset makes you look good, and that's the main point to consider when choosing armor.
+
+    It takes you a while to wriggle into the outfit, and you can't breathe very well after lacing yourself up, but it's worth it. Probably.
+
+    *image images/outfit4-leather.jpg
+
+    *goto confirm_outfit
+
+*label confirm_outfit
+
+You look at yourself in the mirror. Is this what you want to wear?
+
+*choice
+  #Yes, this outfit looks good
+    *goto confirm
+  #No, I want to wear something else
+    *goto wardrobe
+    
+*label confirm
+*if outfit_ruined > 0
+    *set outfit_dirty false
+    *set outfit_changed true
+    Much better. Now you can get back to business, and by business you mean hoeing around.
+    *goto_scene landing
+*else
+    Once you're ready, you go to the cafeteria and have a hearthy breakfast, because you need to keep your strength up if you want to hoe around all day. Of course you plan to spend the day being a ho. That's pretty much all you know, aside from saving the world, and the world is doing just fine for now.
+    
+    Unfortunately, you don't see any of your love interests around. How annoying that they all act like they have jobs instead of being always available when you want them. If you want to get laid, you will have to track them down first.
+    *page_break Where might you find them…?
+    *goto_scene landing

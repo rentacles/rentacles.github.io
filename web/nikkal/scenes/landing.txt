@@ -7,10 +7,10 @@
     *set time_text "It's late morning. Still plenty of time in the day."
     *goto some_intro_text
 *elseif time = 3
-    *set time_text "It's noon."
+    *set time_text "It's noon. Lunchtime."
     *goto some_intro_text
 *elseif time = 4
-    *set time_text "It's early afternoon. Still some time to kill before your meeting."
+    *set time_text "It's early afternoon. Still some time to kill before your evening meeting."
     *goto some_intro_text
 *elseif time = 5
     *set time_text "It's late afternoon. You may have just enough time for one thing before your meeting in the forest."
@@ -19,32 +19,72 @@
     *set time_text "It's evening. You made plans to meet Kingu in the forest."
     *goto some_intro_text
 *else
-    *set time_text "It's the middle of the night."
+    *set time_text "It's the middle of the night. The school is silent."
+    *goto out_of_time
 
 *label some_intro_text
 
 ${time_text}
 
+*if outfit_dirty
+  Your clothes got dirty doing you know what. They smell rather… unpleasant. You should get changed.
+
 *label where_to_next
 
 Where do you want to go?
 
-NOTE: UNFINISHED GAME, CHOOSING ANY OF THOSE OPTIONS ENDS THE GAME
+NOTE: UNFINISHED BRANCHES, CHOOSING "COMING SOON" OPTIONS ENDS THE GAME
 
 *choice
-  #Wait (TESTING ONLY)
+  #Wait (FOR TESTING ONLY)
     *goto_scene landing
+  *if (time = 3) or (time = 4)
+    #Go to lunch (COMING SOON)
+      *goto_scene lunch
+  #Your room
+    *goto_scene your_room
   #Niall's office
     *goto_scene office
-  #Teacher's lounge
-    *goto_scene teacher_lounge
-  #Music classroom
+  #Music classroom (COMING SOON)
     *goto_scene music_room
   #The greenhouse
     *goto_scene greenhouse
-  #Your room
-    *goto_scene your_room
-  #Su's room
-    *goto_scene su_room
-  #The forest
+  #The forest (COMING SOON)
     *goto_scene forest
+
+    
+*label out_of_time
+
+${time_text}
+
+Time sure flies when you're busy trying to sleep with everyone you know!
+
+Too late, you remember you made plans to meet with Kingu in the forest.
+
+*fake_choice
+  #"Maybe I'm still in time to meet him!"
+    You rush off, but first you stop to change your outfit, and then you do your hair and makeup, and by the time you get to the forest it's almost dawn and Kingu isn't there. He didn't even bother to wait for you some 6 or 8 hours. Rude.
+  #"It's late, I'll go to sleep."
+    It's you bad you couldn't bang your favourite dragon, but it's very late and you're tired.
+
+You head off to bed.
+
+All in all, you had an eventful day.
+
+*if fucked = 0
+  You didn't sleep with anyone! That's a bit shocking. You can't remember another time when you didn't have any sex at all, for the entire day!
+  *achieve no_sex
+  *goto the_end
+*else
+  You fucked ${fucked} of your friends. Despite your best efforts, you didn't get to do all of them… this time.
+  *goto the_end
+
+*label the_end
+
+Today didn't go to plan, but you're sure that tomorrow will be better.
+
+THE END… FOR NOW
+
+(TY FOR PLAYING MY JANKY DEMO. I'M SORRY.)
+
+*ending

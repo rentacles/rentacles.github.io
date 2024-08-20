@@ -1,0 +1,77 @@
+*if time = 3
+    The cafeteria is full of students, as well as a few teachers, grabbing lunch.
+
+    You look around to see if there's anyone you recognize, and immediately spot Su sitting at a table near the entrance, waving at you with enthusiasm.
+
+    "I saved you a spot!" she calls out.
+
+    You thank her and go grab some food.
+    *goto food
+*else
+    There aren't many students having lunch at this hour.
+
+    You notice Su sitting at a table near the entrance. "Hi, Nikki!" she calls to you. "You're late, is everything okay?"
+
+    "Yeah, just been busy," you reply. You go grab some food.
+    *goto food
+
+*label food
+
+What do you feel like eating?
+*fake_choice
+    #Lamb stew with potatoes and turnips
+        Hearthy and delicious! Just the thing to keep your strength up.
+    #Roast vegetables with freshly baked bread
+        The bread is still warm from the oven and it smells heavenly.
+    #Honey and walnut cake
+        Today, you feel like indulging a little, so you skip directly to the dessert.
+
+You sit down next to Su and dig in. You've had a busy morning and worked up quite an appetite.
+
+*if outfit_dirty
+    Su starts saying something about classes, then she pauses and takes another look at you.
+
+    "What happened to your outfit?" she asks. "You look like you've been rolling around in a pile grass."
+
+    You glance down at your clothes and wince. There are some very obvious grass stains and dirt stains, as well as other stains that should not be examined too closely.
+
+    "Oh," you say. "It's nothing. I was, you know. In the garden. Doing some gardening?"
+
+    Su narrows her eyes and leans over to sniff you.
+
+    "By the…! Nikkal!" she hisses. "You smell like you've been [i]having sex[/i] in a pile of grass! Please tell me it's not true?"
+
+    You'd like to tell her that, but the evidence is kind of working against you here.
+
+    *fake_choice
+        #"It didn't mean anything!"
+            "I've had enough of your excuses. When you told me you loved me, I thought [i]that[/i] meant something, but clearly it doesn't!"
+        #"It won't happen again!"
+            "That's what you said last time, and the previous time, and… Aargh! I don't know why I believed that this time would be any different!"
+        #"You're the only one I love!"
+            "Then why were you screwing around with Kingu? Or is it Niall? Or Iyar?" Su throws up her hands. "You know what, I don't care."
+        #Remain silent
+            Despite your most fervent prayers, the earth does not open up to swallow you.
+
+    Su pushes back her chair with a clatter and hurries out of the room.
+
+    You don't follow her. She looked really pissed off, and this time it might take more than an apology before she will forgive you.
+
+    It will certainly take more than an apology before she will sleep with you again.
+
+    You finish your lunch in a somber mood.
+
+    *set su_upset true
+    *page_break After lunch…
+    *goto_scene landing
+
+"I didn't see you this morning in class," Su said.
+
+You shrug. "I didn't feel like going to classes," you say around a mouthful of food.
+
+Su lets out a sigh. "Nikki, we talked about skipping classes…"
+
+
+
+
+UNFINISHED!!!!!!!!!!!!!!!!!!

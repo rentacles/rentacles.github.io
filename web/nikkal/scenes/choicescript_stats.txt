@@ -31,5 +31,4 @@ ${outfit_text}
   Your clothes got dirty doing you know what. They smell rather… unpleasant. You should get changed.
 
 *if su_upset
-  Su is upset with you. You should find her and apologize.
-
+  Su is upset with you because she realized you've been cheating on her.
